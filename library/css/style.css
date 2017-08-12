@@ -1389,7 +1389,8 @@ h2, .h2 {
   padding-left: 5px;
   padding-top: 5px;
   text-shadow: 0px 0px 1px #333;
-  background-position-y: -30px; }
+  background-position-y: -30px;
+  text-transform: lowercase; }
 
 h3, .h3 {
   font-size: 2.125em; }
