@@ -260,6 +260,12 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.header {
+  height: 225px; }
+
+#logo {
+  height: 130px; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -285,8 +291,8 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        color: #fff;
-        text-decoration: underline; }
+        color: #2fe2ec;
+        text-decoration: none; }
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
@@ -326,10 +332,9 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-  margin-top: 2.2em; }
+  margin-top: 0em; }
 
 .widgettitle {
-  border-bottom: 2px solid #444;
   margin-bottom: 0.75em; }
 
 .widget {

@@ -31,9 +31,13 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	height: 225px;
+}
 
-	#logo {}
+	#logo {
+		height: 130px;
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -57,8 +61,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
+				color: $blue;
+				text-decoration: none;
 			}
 		}
 
@@ -142,11 +146,10 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: 0em;
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 

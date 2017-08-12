@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: The Star Simpler
+Author: The SplitPixel
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -20,10 +20,20 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
+
+.wdi_load_more {
+	display: none;
+}
+
+.sidebar {
+	position: relative;
+	z-index: 10;
+}
+
 
 /********************
 WORDPRESS BODY CLASSES
@@ -110,6 +120,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	font-family: $display;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -122,23 +133,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 3.5em;
 	line-height: 1.333em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 2.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 2.125em;
 }
 
 h4, .h4 {
 	font-size: 1.1em;
-	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1em;
 }
 
 h5, .h5 {
@@ -153,16 +165,26 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-image: url('../images/header_back.jpg');
+	background-size: cover;
+	background-color: transparent;
+	height: 125px;
 }
 
-	#logo {
-		margin: 0.75em 0;
+#logo {
+	background-image: url('../images/tss_logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 100px;
+	text-indent: -9999px;
+	margin: 20px auto;
+	margin-top: 60px;
 
-		a {
-			color: $white;
-		}
+	a {
+		color: $white;
 	}
+}
 
 /*********************
 NAVIGATION STYLES
@@ -176,6 +198,24 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+#menu-main {
+	float: left;
+}
+
+.header-nav_search {
+	float: right;
+}
+
+.header-nav {
+	position: fixed;
+	width: 100%;
+	transition-duration: 1s;
+	background-color: rgba(255,255,255,0.5);
+	padding: 0.5em 0;
+	border-bottom: 1px solid $blue;
+	z-index: 99;
+}
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -184,9 +224,11 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $gray;
 			text-decoration: none;
-			padding: 0.75em;
+			padding:0em 0.75em;
+			font-weight: bold;
+			text-transform: uppercase;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -259,7 +301,6 @@ POSTS & CONTENT STYLES
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -862,7 +903,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $blue;
 	color: $light-gray;
 }
 
